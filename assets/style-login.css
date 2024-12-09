@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.login{
+    display: flex;
+    height: 100vh;
+    background-color: #360050;
+
+}
+.login .left{
+    flex: 3;
+    background-size: cover;
+    padding: 40px;
+    color: white;
+}
+.login .cover-bg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    /* z-index: -1; Mungkin diperlukan jika Anda ingin menempatkan elemen lain di atasnya */
+    /* Sesuaikan ukuran dan properti lainnya jika diperlukan */
+}
+
+.login .left img{
+    width: 150px;
+}
+
+.login .right{
+    flex: 2;
+    background-color: #360050;
+}
+.login .right .login-content-out{
+    background-color: rgb(255, 253, 248);
+    box-shadow: 0 0 100px #2b003f;
+    height: 100%;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    position: relative;
+}
+.right .login-content{
+    padding: 30px;
+    align-items: center;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-content h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.login-content label{
+    color: #360050;
+    font-size: 14px;
+}
+.login-content form input[type='text'],
+.login-content form input[type='password']{
+    margin-top: 3px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #33004b5b;
+}
+.login-content form input[type='text']{
+    margin-bottom: 25px;
+}
+
+.login-content .bottom-login{
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+}
+.bottom-login .error-login{
+    margin-right: auto;
+    color: #ff0000;
+    font-style: italic;
+    font-size: 13px;
+}
+.bottom-login .lupa-akun {
+    margin-left: auto;
+    right: 0;
+    font-size: 13px;
+    text-decoration: none;
+    color: #919191;
+    font-style: italic;
+}
+.login-content .lupa-akun:hover{
+    color: #33004b;
+}
+.login-content form input[type='submit']{
+    margin-top: 40px;
+    background-color: #360050;
+    color: white;
+    padding: 16px 0px;
+    width: 320px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.login-content form input[type='submit']:hover{
+    background-color: #570080;
+}
