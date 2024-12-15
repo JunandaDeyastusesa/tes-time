@@ -42,12 +42,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../member/member.php">
+                                <a class="nav-link active" href="../member/member.php">
                                     <img src="../../assets/ikon/Siswa.svg" alt="">Siswa
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../peket_kelas/index.php">
+                                <a class="nav-link" href="../peket_kelas/index.php">
                                     <img src="../../assets/ikon/active-pkt-kls.svg" alt="">Paket Kelas
                                 </a>
                             </li>
@@ -92,10 +92,12 @@
                             <thead>
                                 <tr>
                                     <th class="py-2">No</th>
-                                    <th class="py-2">ID Kelas</th>
-                                    <th class="py-2">Nama Kelas</th>
-                                    <th class="py-2">Kapasitas Kelas</th>
-                                    <th class="py-2">Harga</th>
+                                    <th class="py-2">ID Member</th>
+                                    <th class="py-2">Tanggal Daftar</th>
+                                    <th class="py-2">Nama Siswa</th>
+                                    <th class="py-2">No. Telepon</th>
+                                    <th class="py-2">Tgl Lahir</th>
+                                    <th class="py-2">Alamat</th>
                                     <th class="py-2">Aksi</th>
                                 </tr>
                             </thead>
@@ -103,9 +105,11 @@
                                 <tr>
                                     <td class="text-center">1</td>
                                     <td class="text-center">001</td>
-                                    <td class="text-center">CPNS Offline</td>
-                                    <td class="text-center">12</td>
-                                    <td class="text-center">Rp. 500.000</td>
+                                    <td class="text-center">12 Juli 2023</td>
+                                    <td class="text-center">Anang Sunanto</td>
+                                    <td class="text-center">08562134646</td>
+                                    <td class="text-center">16 Mei 2005</td>
+                                    <td class="text-center">Jl. Manukan Gg. Besar Surabaya</td>
                                     <td class="text-center">
                                         <button class="btn btn-sm btn-outline-warning me-2" data-bs-toggle="modal" data-bs-target="#editKelasModal">Edit</button>
                                         <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteKelasModal">Hapus</button>
@@ -133,16 +137,24 @@
                                 <input type="number" class="form-control" id="id_kelas" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nama_kelas" class="form-label">Nama Kelas:</label>
-                                <input type="text" class="form-control" id="nama_kelas" required>
+                                <label for="tanggal_daftar" class="form-label">Tanggal Daftar:</label>
+                                <input type="date" class="form-control" id="tanggal_daftar" required>
                             </div>
                             <div class="mb-3">
-                                <label for="kapasitas_kelas" class="form-label">Kapasitas Kelas:</label>
-                                <input type="number" class="form-control" id="kapasitas_kelas" required>
+                                <label for="nama" class="form-label">Nama:</label>
+                                <input type="text" class="form-control" id="nama" required>
                             </div>
                             <div class="mb-3">
-                                <label for="harga" class="form-label">Harga Kelas:</label>
-                                <input type="number" class="form-control" id="harga" required>
+                                <label for="no_telepon" class="form-label">No Telepon:</label>
+                                <input type="text" class="form-control" id="no_telepon" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir:</label>
+                                <input type="date" class="form-control" id="kapasitas_kelas" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat:</label>
+                                <input type="text" class="form-control" id="alamat" required>
                             </div>
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary px-4 mt-3">Kirim</button>
@@ -164,20 +176,28 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <label for="id_kelas" class="form-label">ID Kelas:</label>
-                                <input type="number" class="form-control" id="id_kelas" placeholder="001" required>
+                                <label for="id_siswa" class="form-label">ID Siswa:</label>
+                                <input type="number" class="form-control" id="id_siswa" placeholder="id siswa" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nama_kelas" class="form-label">Nama Kelas:</label>
-                                <input type="text" class="form-control" id="nama_kelas" placeholder="Nama Lengkap" required>
+                                <label for="tanggal_daftar" class="form-label">Tanggal Daftar:</label>
+                                <input type="date" class="form-control" id="tanggal_daftar" placeholder="tanggal daftar" required>
                             </div>
                             <div class="mb-3">
-                                <label for="kapasitas_kelas" class="form-label">Kapasitas Kelas:</label>
-                                <input type="number" class="form-control" id="kapasitas_kelas" placeholder="12" required>
+                                <label for="nama" class="form-label">Nama:</label>
+                                <input type="text" class="form-control" id="nama" placeholder="nama" required>
                             </div>
                             <div class="mb-3">
-                                <label for="harga" class="form-label">Harga Kelas:</label>
-                                <input type="number" class="form-control" id="harga" placeholder="Rp. 500.000" required>
+                                <label for="no_telepon" class="form-label">No Telepon:</label>
+                                <input type="number" class="form-control" id="no_telepon" placeholder="08655556646" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="tanggal_lahir" class="form-label">Tanggal Lahir:</label>
+                                <input type="date" class="form-control" id="tanggal_lahir" placeholder="tanggal lahir" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat:</label>
+                                <input type="text" class="form-control" id="alamat" placeholder="alamat" required>
                             </div>
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary px-4 mt-3">Kirim</button>
@@ -197,7 +217,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Apakah Anda yakin ingin menghapus kelas ini?</p>
+                        <p>Yakin Mau Hapus?</p>
                         <button class="btn btn-danger">Hapus</button>
                         <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                     </div>
