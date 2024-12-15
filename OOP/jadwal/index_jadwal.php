@@ -42,12 +42,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../member/member.php">
+                                <a class="nav-link active" href="../member/member.php">
                                     <img src="../../assets/ikon/Siswa.svg" alt="">Siswa
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../peket_kelas/index.php">
+                                <a class="nav-link" href="../peket_kelas/index.php">
                                     <img src="../../assets/ikon/active-pkt-kls.svg" alt="">Paket Kelas
                                 </a>
                             </li>

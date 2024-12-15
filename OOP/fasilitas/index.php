@@ -47,7 +47,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="../peket_kelas/index.php">
+                                <a class="nav-link" href="../peket_kelas/index.php">
                                     <img src="../../assets/ikon/active-pkt-kls.svg" alt="">Paket Kelas
                                 </a>
                             </li>
@@ -62,7 +62,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="../fasilitas/index.php">
+                                <a class="nav-link active" href="../fasilitas/index.php">
                                     <img src="../../assets/ikon/fasilitas.svg" alt="">Fasilitas
                                 </a>
                             </li>
@@ -78,7 +78,7 @@
                 <!-- Main Content -->
                 <main class="content col-md-10 ms-sm-auto col-lg-10 px-md-4">
                     <div class="title-page d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-3">
-                        <h1>Data Kelas</h1>
+                        <h1>Data Fasilitas</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambahKelasModal">
                                 Tambah
@@ -92,20 +92,20 @@
                             <thead>
                                 <tr>
                                     <th class="py-2">No</th>
-                                    <th class="py-2">ID Kelas</th>
-                                    <th class="py-2">Nama Kelas</th>
-                                    <th class="py-2">Kapasitas Kelas</th>
-                                    <th class="py-2">Harga</th>
+                                    <th class="py-2">ID Fasilitas</th>
+                                    <th class="py-2">Nama Fasilitas</th>
+                                    <th class="py-2">Jumlah</th>
+                                    <th class="py-2">Status</th>
                                     <th class="py-2">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="text-center">1</td>
-                                    <td class="text-center">001</td>
-                                    <td class="text-center">CPNS Offline</td>
-                                    <td class="text-center">12</td>
-                                    <td class="text-center">Rp. 500.000</td>
+                                    <td class="text-center">01</td>
+                                    <td class="text-center">AC</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">Tidak Dingin</td>
                                     <td class="text-center">
                                         <button class="btn btn-sm btn-outline-warning me-2" data-bs-toggle="modal" data-bs-target="#editKelasModal">Edit</button>
                                         <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteKelasModal">Hapus</button>
@@ -129,21 +129,27 @@
                     <div class="modal-body">
                         <form>
                             <div class="mb-3">
-                                <label for="id_kelas" class="form-label">ID Kelas:</label>
-                                <input type="number" class="form-control" id="id_kelas" required>
+                                <label for="id_fasilitas" class="form-label">ID Fasilitas:</label>
+                                <input type="number" class="form-control" id="id_fasilitas" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nama_kelas" class="form-label">Nama Kelas:</label>
-                                <input type="text" class="form-control" id="nama_kelas" required>
+                                <label for="nama_fasilitas" class="form-label">Nama Fasilitas:</label>
+                                <input type="text" class="form-control" id="nama_fasilitas" required>
                             </div>
                             <div class="mb-3">
-                                <label for="kapasitas_kelas" class="form-label">Kapasitas Kelas:</label>
-                                <input type="number" class="form-control" id="kapasitas_kelas" required>
+                                <label for="jumlah" class="form-label">Jumlah:</label>
+                                <input type="number" class="form-control" id="jumlah" required>
                             </div>
                             <div class="mb-3">
-                                <label for="harga" class="form-label">Harga Kelas:</label>
-                                <input type="number" class="form-control" id="harga" required>
+                                <label for="status fasilitas" class="form-label">Status Fasilitas:</label>
+                                <input type="number" class="form-control" id="status_fasilitas" required>
                             </div>
+                            <label for="status_fasilitas">Status Fasilitas:</label>
+                        <select id="status_fasilitas" name="status_fasilitas" required>
+                            <option value="">-- Pilih Status --</option>
+                            <option value="Lengkap">Lengkap</option>
+                            <option value="Tidak Lengkap">Tidak Lengkap</option>
+                        </select><br><br>
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary px-4 mt-3">Kirim</button>
                             </div>
@@ -163,21 +169,21 @@
                     </div>
                     <div class="modal-body">
                         <form>
-                            <div class="mb-3">
-                                <label for="id_kelas" class="form-label">ID Kelas:</label>
-                                <input type="number" class="form-control" id="id_kelas" placeholder="001" required>
+                        <div class="mb-3">
+                                <label for="id_fasilitas" class="form-label">ID Fasilitas:</label>
+                                <input type="number" class="form-control" id="number" placeholder="17 Mei 2023" required>
                             </div>
                             <div class="mb-3">
-                                <label for="nama_kelas" class="form-label">Nama Kelas:</label>
-                                <input type="text" class="form-control" id="nama_kelas" placeholder="Nama Lengkap" required>
+                                <label for="nama_fasilitas" class="form-label">Nama Fasilitas:</label>
+                                <input type="text" class="form-control" id="text" placeholder="AC" required>
                             </div>
                             <div class="mb-3">
-                                <label for="kapasitas_kelas" class="form-label">Kapasitas Kelas:</label>
-                                <input type="number" class="form-control" id="kapasitas_kelas" placeholder="12" required>
+                                <label for="jumlah" class="form-label">Jumlah:</label>
+                                <input type="number" class="form-control" id="number" placeholder="1" required>
                             </div>
                             <div class="mb-3">
-                                <label for="harga" class="form-label">Harga Kelas:</label>
-                                <input type="number" class="form-control" id="harga" placeholder="Rp. 500.000" required>
+                                <label for="status fasilitas" class="form-label">Status Fasilitas:</label>
+                                <input type="text" class="form-control" id="text" placeholder="Panas" required>
                             </div>
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-primary px-4 mt-3">Kirim</button>
@@ -197,7 +203,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Apakah Anda yakin ingin menghapus kelas ini?</p>
+                        <p>Yakin Mau Hapus?</p>
                         <button class="btn btn-danger">Hapus</button>
                         <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                     </div>
